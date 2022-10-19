@@ -1,4 +1,4 @@
-// // Exercício 01
+// Exercício 01
 
 function cubicSquare(){
 
@@ -9,7 +9,7 @@ function cubicSquare(){
 }
 cubicSquare()
 
-// // Exercício 02
+// Exercício 02
 
 function divisiblesFor() {
   let limitador = parseFloat(prompt("digite um número"));
@@ -24,7 +24,7 @@ function divisiblesFor() {
 }
 divisiblesFor()
 
-// // Exercício 03
+// Exercício 03
 
 function stringElement(string, numero){
   for(let elemento = 0; elemento<string.length; elemento++){
@@ -61,7 +61,7 @@ console.log(rstd)
 
 
 
-// // Exercício 05
+// Exercício 05
 
 function stringRest(stringS, numeroS) {
   let palavra = "";
@@ -77,7 +77,7 @@ function stringRest(stringS, numeroS) {
 let retornoSli = stringRest("calopsita", 5);
 console.log(retornoSli);
 
-// // Exercício 06
+// Exercício 06
 
 function countVowels(script) {
   let contadorLetra = 0;
@@ -97,7 +97,7 @@ function countVowels(script) {
 let result = countVowels("abobora");
 console.log(`Retorna ${result} pois tem ${result} na palavra`)
 
-// // Exercício 07
+// Exercício 07
 
 function countTextOccurrences(texto, letr){
   let contarLetras = 0
@@ -113,7 +113,7 @@ return (`Retorna ${contarLetras}, pois a letra ${letr}, aparece ${contarLetras}`
 let textoOcorrencia = countTextOccurrences("morango", "m")
 console.log(textoOcorrencia)
 
-// // Exercício 08
+// Exercício 08
 
 function textBackwards(contra){
   let inicial = "";
@@ -143,31 +143,40 @@ function removeBlank(remove){
 let conversao = removeBlank("Não ficará espaço em branco");
 console.log(conversao)
 
-// // Exercicio 10
+// Exercicio 10
 
 function encryptText(text){
 
-resultado1 = text.replace(/a/g, "x")
-resultado2 = text.replace(/e/g, "y")
-resultado3 = text.replace(/i/g, "w")
-resultado4 = text.replace(/o/g, "k")
-resultado5 = text.replace(/u/g, "z")
-
-let resultado1e2 = resultado1 += resultado2
-let resultado2e3 = resultado1e2 += resultado3
-let resultado3e4 = resultado2e3 += resultado4
-let resultado4e5= resultado3e4 += resultado5
 
 
-  for(tx = 0; tx <= text.length; tx++){
+let frase = ""
+for(ind = 0; ind <text.length; ind++){
 
-    if(text[tx] == "a" || text[tx] == "e" || text[tx] == "i" || text[tx] == "o" || text[tx] =="u" ){
-      console.log (resultado4e5)
-      
+  if(text[ind] == "a"){
+    frase += "x"
+  }
+  else if(text[ind] == "e"){
+    frase += "y"
+  }
+  else if(text[ind] == "i"){
+    frase += "w"
+  }
+  else if(text[ind] == "o"){
+    frase += "k"
+  }
+  else if (text[ind] == "u"){
+    frase += "z"
+  }
 
-    }
+  else{
+    frase += text[ind]
+  }
+  
+}
+
+return frase
 
 }
-}
-let funcaosubs = encryptText("eu gosto de biscoito")
-console.log(funcaosubs)
+
+let fraseCompleta = encryptText("eu gosto de biscoito e amoras");
+console.log(fraseCompleta)
